@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="pnark.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>En Çok Okunan Kitaplar</title>
+    
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">  </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+               <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand list-unstyled2" href="homepage.aspx">
+                    Anasayfa
+                </a>
+                <button class="navbar-toggler right" type="button" data-toggler="collapse"
+                    data-target="#navbarSpportedContent" aria-controls="#navbarSpportedContent"
+                    aria-expanted="false" aria-label="Toggle navigation">
+                    <span class="navbartoggler-icon"></span>
+
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        
+                        <div class="col">
+                        <ul class="navbar-nav mr-auto>
+                            <form class="d-flex" role="search">
+                                       <input class="form-control me-2" type="search" placeholder="ARAMAK İSTEDİĞİNİZ KİTABI GİRİNİZ" aria-label="ARA">
+                                        <button class="btn btn-outline-success" type="submit">ARA</button>
+                             </form>
+                           
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server"
+                                    OnClick="LinkButton1_Click">GİRİŞ YAP</asp:LinkButton>
+           
+                            </li>
+           
+                            <li class="nav-item active">
+                                    <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server"
+                                    OnClick="LinkButton2_Click">ÜYE OL</asp:LinkButton>
+                               </li>
+                               <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server"
+                                    OnClick="LinkButton3_Click">ADMİN GİRİŞİ</asp:LinkButton>
+                               </li>
+                            
+                        </ul>       
+                            
+                            </div>
+                        </div>           
+                   </nav>
+            </div>
+
+
+         <div>
+               <nav class="navbar navbar-expand-lg navbar-light">
+                
+                <button class="navbar-toggler right" type="button" data-toggler="collapse"
+                    data-target="#navbarSpportedContent" aria-controls="#navbarSpportedContent"
+                    aria-expanted="false" aria-label="Toggle navigation">
+                    <span class="navbartoggler-icon"></span>
+
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      
+                       
+                        <div class="col">
+                        
+                        <ul class="navbar-nav list-unstyled d-flex justify-content-around">
+                             <li class="nav-item activer">
+                                <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server"   OnClik="LinkButton4_Click"
+                                    >DİSTOPYA</asp:LinkButton>
+                                 &nbsp;
+                            </li>
+                             <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server"
+                                    OnClick="LinkButton5_Click">İNSAN VE TOPLUM
+
+                                </asp:LinkButton>
+                            </li>
+                             <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton6" runat="server"
+                                    OnClick="LinkButton6_Click">HİKAYE</asp:LinkButton>
+                            </li>
+
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server"
+                                    OnClick="LinkButton7_Click">OTOBİYOGRAFİ</asp:LinkButton>
+                            </li>
+                             <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton8" runat="server"
+                                    OnClick="LinkButton8_Click">AŞK</asp:LinkButton>
+                            </li>
+                               <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton9" runat="server"
+                                    OnClick="LinkButton9_Click">ROMAN</asp:LinkButton>
+                            </li>
+                        </ul>
+                           
+                             
+       </div>
+      
+                            </div>
+
+                        
+                   </nav>
+            </div>
+
+   
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+       
+    </form>
+</body>
+</html>
